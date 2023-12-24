@@ -13,3 +13,12 @@ function reveal(){
         }
     }
 }
+
+//flipping
+
+const card = document.querySelector('.card-wrapper');
+const rotateBtn = document.querySelector('.icon-link');
+
+rotateBtn.addEventListener('click', function(){
+    card.classList.toggle('is-flipped');
+})
