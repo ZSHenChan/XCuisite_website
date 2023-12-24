@@ -1,0 +1,196 @@
+$primary: #fe6601;
+$secondary: #ffffff;
+$tertiary: #1d5191;
+
+body{
+    font-family: 'Noto Sans', sans-serif !important;
+    // overflow: hidden;
+}
+
+//curtain
+.navbar-item{
+    padding-left: 2rem;
+    a,i{
+        color: $secondary !important;
+    }
+    i{
+        padding-left: 2rem !important;
+    }
+}
+.global-curtain{
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 4;
+        left: 0;
+        top: 0;
+        background-color: $primary;
+        overflow-x: hidden;
+        transition: 0.5s;
+
+}
+.global-curtain-bottom{
+    content: "";
+    position: fixed;
+    top:0%;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: 3;
+    transition: 0.2s;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); 
+}
+
+.curtain-flyout{
+    height: 50% !important;
+}
+.curtain-bottom-flyout{
+    height: 100% !important;
+}
+.global-curtain-content{
+    color: $secondary !important;
+    padding: 5%;
+    position: relative;
+    top:5%;
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.content-wrapper{
+    margin:2rem;
+}
+
+//video
+.intro{
+    height: auto;
+    width: 100%;
+
+    video{
+        height: auto;
+        width: 100%;
+        object-fit:cover;
+    }
+}
+
+@keyframes fade-up{
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+@keyframes fade-down{
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+// products
+.reveal{
+    opacity: 0;
+}
+.reveal.active{
+    opacity: 1;
+    animation: fade-up 1s;
+}
+.card{
+    margin-bottom: 1rem;
+    .card-wrapper{
+        position: absolute !important;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: all 0.5s linear;
+        -webkit-backface-visibility: hidden ;
+        backface-visibility: hidden ;
+        overflow: hidden;
+    }
+    .cta-links{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 90%;
+
+        .icon-link{
+            z-index: 1;
+            color: $primary;
+            text-decoration: none;
+            text-underline-offset: 0.1;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    a{
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px; 
+        }
+    }
+    button{
+        font-size: 90%;
+    }
+    }
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 0 11px rgba(33,33,33,.2); ;
+        transform: translate3D(0,-0.5px,0) scale(1.01);
+        transition: all 0.4s ease;
+    }
+}
+.card.is-flipped{
+    transform: rotateY(180deg);
+}
+
+.globalfooter{
+    color: $secondary;
+    font-size: 0.9rem !important;
+    a{
+        color: $secondary;
+    }
+    .globalfooter-column{
+        h3{
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+    }
+    .globalfooter-mini-shop, .copyright{
+        font-size: 0.8rem !important;
+    }
+    .globalfooter-column-section{
+        list-style: none;
+        padding-left: 0.5rem;
+        margin-bottom: 2.4rem;
+    }
+    .globalfooter-column-section-item{
+        text-align: left;
+        margin-bottom: 0.5rem;
+        a{
+            text-decoration: none;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+/* Option 2: Import via CSS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
