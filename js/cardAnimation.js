@@ -16,9 +16,10 @@ function reveal(){
 
 //flipping
 
-const card = document.querySelector('.card-wrapper');
-const rotateBtn = document.querySelector('.icon-link');
+const rotateBtn = document.querySelectorAll('.icon-link');
 
-rotateBtn.addEventListener('click', function(){
-    card.classList.toggle('is-flipped');
-})
+for (let i=0; i<rotateBtn.length; i++){
+    rotateBtn[i].addEventListener('click', function(){
+        rotateBtn[i].closest('.card-wrapper').classList.toggle('is-flipped');
+    })
+}
