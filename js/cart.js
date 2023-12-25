@@ -8,8 +8,7 @@ cartIcon.addEventListener('mouseover', () =>{
     
 })
 
-cartIcon.addEventListener('mouseout', () =>{
+globalCurtainBottom.addEventListener('mouseover', () =>{
     globalCurtainBottom.classList.remove("curtain-bottom-flyout");
     globalCurtain.classList.remove("curtain-flyout");
 });
-

@@ -2,19 +2,43 @@ $primary: #fe6601;
 $secondary: #ffffff;
 $tertiary: #1d5191;
 
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
 body{
     font-family: 'Noto Sans', sans-serif !important;
     // overflow: hidden;
 }
 
 //curtain
-.navbar-item{
-    padding-left: 2rem;
-    a,i{
-        color: $secondary !important;
+#cart-icon{
+    @media(max-width:$md){
+        margin-right: 1rem;
     }
-    i{
-        padding-left: 2rem !important;
+    
+}
+.navbar{
+    flex-direction: row-reverse;
+    @media(max-width: $md){
+        justify-content: end;
+    }
+}
+.navbar-menuback{
+    position: absolute;
+    left: 23px;
+    top:15px;
+    @media (min-width: $md){
+        display: none;
+    }
+}
+.navbar-brand{
+    display: none;
+    @media(min-width: $md){
+        display: block;
     }
 }
 .global-curtain{
@@ -64,13 +88,24 @@ body{
 
 //video
 .intro{
-    height: auto;
     width: 100%;
-
     video{
-        height: auto;
+        // height: auto;
         width: 100%;
         object-fit:cover;
+        margin-bottom: 0.5rem;
+    }
+    #video-desktop{
+        display: none;
+        @media(min-width: $lg){
+            display: block;
+        }
+    }
+    #video-mobile{
+        display: block;
+        @media(min-width: $lg){
+            display: none;
+        }
     }
 }
 
@@ -192,21 +227,9 @@ body{
     }
 }
 
+//import scss
 @import "../node_modules/bootstrap/scss/bootstrap";
-.col-section{
-    position: relative;
-    height: auto;
-    background-color: transparent;
-    perspective: 1000px;
-    
-    // @include media-breakpoint-up(sm){
-    //     height: 35rem;
-    // }
-
-    // @include media-breakpoint-up(lg){
-    //     height: 30rem;
-    // }
-}
-/* Option 2: Import via CSS */
+//google fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+//bootstrap
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
