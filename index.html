@@ -28,9 +28,7 @@
   </head>
 
   <body class="bg-primary">
-    <nav
-      class="navbar navbar-dark sticky-top navbar-expand-md px-4 bg-primary"
-    >
+    <nav class="navbar navbar-dark sticky-top navbar-expand-md px-4 bg-primary">
       <!-- <div class="container-xxl"> -->
       <a href="#" class="navbar-menuback">
         <img
@@ -39,10 +37,10 @@
           width="30"
         />
       </a>
-      
+
       <div
         class="navbar-nav justify-content-between d-flex flex-row align-items-center"
-      >  
+      >
         <span id="cart-icon"><i class="bi bi-gift nav-link"></i></span>
         <button
           class="navbar-toggler"
@@ -57,8 +55,11 @@
         </button>
       </div>
 
-      <div class="collapse navbar-collapse align-items-center" id="main-nav">
-   
+      <div
+        class="collapse navbar-collapse navbar-nav-scroll align-items-center"
+        id="main-nav"
+        style="--bs-scroll-height: 100dvh"
+      >
         <ul class="navbar-nav">
           <li class="navbar-item">
             <a href="#" class="navbar-brand">
@@ -69,8 +70,23 @@
               />
             </a>
           </li>
+          <li class="navbar-item">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#main-nav"
+              aria-controls="main-nav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              style="position: absolute; right: 24px; top: 8px"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </li>
           <li class="navbar-item"><a href="" class="nav-link">About</a></li>
           <li class="navbar-item"><a href="" class="nav-link">Offers</a></li>
+          <li class="navbar-item"><a href="" class="nav-link">Stores</a></li>
           <li class="navbar-item">
             <a href="" class="nav-link">Contact&nbsp;Us</a>
           </li>
@@ -79,12 +95,17 @@
           </li>
         </ul>
       </div>
-      </div>
     </nav>
-    <div class="global-curtain" id="global-curtain">
+    <div class="global-curtain" id="cart-curtain">
       <div class="global-curtain-content">
         <h3>Your Items</h3>
-        <i class="bi bi-x-lg"></i>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
+          voluptatum sit, dolor officiis nihil magnam esse veritatis corporis
+          quaerat dolorum nesciunt iste assumenda quod. Harum nemo libero
+          reprehenderit qui excepturi!
+        </p>
+        <!-- <i class="bi bi-x-lg"></i> -->
       </div>
     </div>
     <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
@@ -521,102 +542,189 @@
 
   <footer class="globalfooter text-secondary">
     <div class="globalfooter-content px-5">
-      <nav class="globalfooter-directory row row-cols-2 row-cols-sm-3 mb-5">
+      <nav class="globalfooter-directory row row-cols-1 row-cols-md-3 mb-5">
         <div class="globalfooter-column col">
-          <ul class="globalfooter-column-section">
-            <h3>Shop</h3>
-            <li class="globalfooter-column-section-item">
-              <a href="#">abcde</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">wxyz</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">pqrstu</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">hijkl</a>
-            </li>
-          </ul>
-          <ul class="globalfooter-column-section">
-            <h3>Shop</h3>
-            <li class="globalfooter-column-section-item">
-              <a href="#">abcde</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">wxyz</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">pqrstu</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">hijkl</a>
-            </li>
-          </ul>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text">Stores</span>
+              <button
+                id="globalfooterColumnSectionButton-Stores"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Stores</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <ul class="globalfooter-column-section-list">
+              <li class="globalfooter-column-section-item">
+                <a href="#">Singapore</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">Malaysia</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">Indonesia</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">Thailand</a>
+              </li>
+            </ul>
+          </div>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text"
+                >About Us</span
+              >
+              <button
+                id="globalfooterColumnSectionButton-About-Us"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>About Us</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <ul class="globalfooter-column-section-list">
+              <li class="globalfooter-column-section-item">
+                <a href="#">Career Opportunities</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">Investors</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">Events</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">History</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="globalfooter-column col">
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text">Shops</span>
+              <button
+                id="globalfooterColumnSectionButton-Shops"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Shops</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <ul class="globalfooter-column-section-list">
+              <li class="globalfooter-column-section-item">
+                <a href="#">abcde</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">wxyz</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">pqrstu</a>
+              </li>
+            </ul>
+          </div>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text">Shops</span>
+              <button
+                id="globalfooterColumnSectionButton-Shops"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Shops</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <ul class="globalfooter-column-section-list">
+              <li class="globalfooter-column-section-item">
+                <a href="#">pqrstu</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">hijkl</a>
+              </li>
+            </ul>
+          </div>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text">Shops</span>
+              <button
+                id="globalfooterColumnSectionButton-Shops"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Shops</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <ul class="globalfooter-column-section-list">
+              <li class="globalfooter-column-section-item">
+                <a href="#">abcde</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">wxyz</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="globalfooter-column col">
-          <ul class="globalfooter-column-section">
-            <h3>Shop</h3>
-            <li class="globalfooter-column-section-item">
-              <a href="#">abcde</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">wxyz</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">pqrstu</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">hijkl</a>
-            </li>
-          </ul>
-          <ul class="globalfooter-column-section">
-            <h3>Shop</h3>
-            <li class="globalfooter-column-section-item">
-              <a href="#">abcde</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">wxyz</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">pqrstu</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">hijkl</a>
-            </li>
-          </ul>
-        </div>
-        <div class="globalfooter-column col">
-          <ul class="globalfooter-column-section">
-            <h3>Shop</h3>
-            <li class="globalfooter-column-section-item">
-              <a href="#">abcde</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">wxyz</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">pqrstu</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">hijkl</a>
-            </li>
-          </ul>
-          <ul class="globalfooter-column-section">
-            <h3>Shop</h3>
-            <li class="globalfooter-column-section-item">
-              <a href="#">abcde</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">wxyz</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">pqrstu</a>
-            </li>
-            <li class="globalfooter-column-section-item">
-              <a href="#">hijkl</a>
-            </li>
-          </ul>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text">Shops</span>
+              <button
+                id="globalfooterColumnSectionButton-Shops"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Shops</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <ul class="globalfooter-column-section-list">
+              <li class="globalfooter-column-section-item">
+                <a href="#">abcde</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">wxyz</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">pqrstu</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">hijkl</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">abcde</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">wxyz</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">pqrstu</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">hijkl</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">abcde</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">wxyz</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">pqrstu</a>
+              </li>
+              <li class="globalfooter-column-section-item">
+                <a href="#">hijkl</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div
@@ -629,8 +737,8 @@
           or call 012-345-6789
         </p>
         <div class="social-medias fs-4 lh-0">
-          <a href="#" class="p-3"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="p-3"><i class="bi bi-instagram"></i></a>
+          <a href="" class="p-3"><i class="bi bi-facebook"></i></a>
+          <a href="" class="p-3"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
       <div class="copyright pb-5">
@@ -657,4 +765,5 @@
   <script src="js/cart.js"></script>
   <script src="js/video.js"></script>
   <script src="js/cardAnimation.js"></script>
+  <script src="js/footer.js"></script>
 </html>

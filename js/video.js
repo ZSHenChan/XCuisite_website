@@ -25,7 +25,5 @@ if (window.getComputedStyle(video).getPropertyValue("display")=="block"){
         delay+= (scrollpos - delay) *accelamount;
         video.currentTime = scrollpos;
     }, 33.3)
-}else{
-    console.log("display is none")
 }
 

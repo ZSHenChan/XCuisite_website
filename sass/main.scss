@@ -9,17 +9,16 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
+
 body{
     font-family: 'Noto Sans', sans-serif !important;
-    // overflow: hidden;
 }
 
-//curtain
+//navbar
 #cart-icon{
     @media(max-width:$md){
         margin-right: 1rem;
     }
-    
 }
 .navbar{
     flex-direction: row-reverse;
@@ -28,7 +27,7 @@ body{
     }
 }
 .navbar-menuback{
-    position: absolute;
+    position: fixed;
     left: 23px;
     top:15px;
     @media (min-width: $md){
@@ -41,17 +40,41 @@ body{
         display: block;
     }
 }
+// .collapse, .navbar-collapse{
+//     height: auto;
+// }
+.navbar-nav-scroll{
+    @media (width<$md) {
+        position: fixed;
+        width: 100%;
+        top:0;
+        left:0;
+        transition: 0.6s ease-in-out !important;
+        overflow-y: hidden !important;
+        background-color: $primary;
+        ul{
+            height: 100dvh;
+            margin-top: 3rem;
+            margin-left: 1rem;
+        }
+        li>a{
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+    }
+   
+}
+//curtain
 .global-curtain{
         height: 0%;
         width: 100%;
         position: fixed;
         z-index: 4;
         left: 0;
-        top: 0;
+        top: 30px;
         background-color: $primary;
-        overflow-x: hidden;
-        transition: 0.5s;
-
+        overflow-y: hidden;
+        transition: 0.4s ease-in-out;
 }
 .global-curtain-bottom{
     content: "";
@@ -65,12 +88,12 @@ body{
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px); 
 }
-
 .curtain-flyout{
-    height: 50% !important;
+    height: 50%;
 }
 .curtain-bottom-flyout{
-    height: 100% !important;
+    height: 100%;
+    display: block;
 }
 .global-curtain-content{
     color: $secondary !important;
@@ -82,11 +105,7 @@ body{
     margin-top: 1rem;
 }
 
-.content-wrapper{
-    margin:2rem;
-}
-
-//video
+// scrolling video
 .intro{
     width: 100%;
     video{
@@ -122,6 +141,16 @@ body{
 }
 
 // products
+.content-wrapper{
+    margin:2rem;
+
+    h1{
+        transition-delay: 0.5s;
+        -webkit-transition-delay: 0.5s;
+        -o-transition-delay: 0.5s;
+        -moz-transition-delay: 0.5s;
+    }
+}
 .reveal{
     opacity: 0;
 }
@@ -130,13 +159,13 @@ body{
     animation: fade-up 1s;
 }
 .col-section{
-    perspective: 500px;
+    perspective: 900px;
 }
 .card-wrapper{
     display: grid;
     transform-style: preserve-3d;
     transition-timing-function: ease-in-out;
-    transition: 0.8s;
+    transition: 0.6s ease-in-out;
 }
 .face{
     width: 100%;
@@ -192,39 +221,95 @@ body{
     }
 }
 
+// global footer
 .globalfooter{
     color: $secondary;
     font-size: 0.9rem !important;
     a{
         color: $secondary;
+        opacity: 70%;
     }
     .globalfooter-column{
         h3{
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            // margin-bottom: 0.8rem;
         }
-        p{
-            font-size: 0.9rem;
+        .expanded{
+            .globalfooter-column-section-list{
+                visibility: visible ;
+                margin-bottom: 0.5rem ;
+                height: auto ;
+                transition: 0.5s ease-out;
+            }
         }
-    }
-    .globalfooter-mini-shop, .copyright{
-        font-size: 0.8rem !important;
     }
     .globalfooter-column-section{
         list-style: none;
-        padding-left: 0.5rem;
-        margin-bottom: 2.4rem;
-    }
-    .globalfooter-column-section-item{
-        text-align: left;
-        margin-bottom: 0.5rem;
-        a{
-            text-decoration: none;
+        padding-left: 0;
+        padding-bottom: 1rem;
+        transition: 0.5s ease-in-out;
+        
+        .globalfooter-column-section-list{
+            list-style: none;
+            padding-left: 0;
+            
+            a{
+                text-decoration: none;
+            }
+            @media (max-width:$md) {
+                visibility: hidden;
+                height: 0;
+                margin-bottom: 0;
+                padding-left: 1rem;
+            }
         }
-        &:hover{
-            text-decoration: underline;
+        .globalfooter-column-section-item{
+            text-align: left;
+            @media (min-width: $md) {
+                padding-bottom: 0.3rem;
+            }
+            
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .globalfooter-column-section-title{
+
+            .globalfooter-column-section-title-text{
+                margin-bottom: 0rem;
+                @media (max-width:$md){
+                    display: none;
+                }
+            }
+            .globalfooter-column-section-title-text-button{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &:hover{
+                    background-color: $primary;
+                    border-color: $primary;
+                }
+                @media (min-width:$md) {
+                    display: none;
+                }
+            }
+        }
+
+        &::after{
+            content: "";
+            position: relative;
+            height: 1px;
+            display: block;
+            background-color: $secondary;
+            opacity: 70%;
+            @media (min-width: $md){
+                display: none;
+            }
         }
     }
+    
 }
 
 //import scss
