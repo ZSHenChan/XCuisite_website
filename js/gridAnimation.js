@@ -41,8 +41,4 @@ observer.observe(grid3);
 observer.observe(grid4);
 captionObserver.observe(caption);
 
-//post intro
-const textLines = document.querySelectorAll('.text-lines');
-textLines.forEach((textLine) =>{
-    textLineObserver.observe(textLine);
-})
+

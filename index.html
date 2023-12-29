@@ -19,8 +19,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -116,16 +118,17 @@
     </div>
     <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
 
-    <main class="rounded-3 text-center p-0">
+    <main class="rounded-3 text-center p-0" id="main-body">
       <section class="intro">
-        <video
+        <h1 class="hero-caption">Strawberry Flamingo</h1>
+        <!-- <video
           id="video-desktop"
           src="videos/video.mov"
           type="mov"
           preload="auto"
           muted
           playsinline
-        ></video>
+        ></video> -->
         <video
           id="video-mobile"
           src="videos/video.mov"
@@ -138,91 +141,124 @@
       </section>
 
       <section class="post-intro">
-        <div class="text-lines hidden">
-          <h2>Donuts</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum,
-            illo.
-          </p>
-        </div>
-        <div class="text-lines hidden">
-          <h2>Donuts</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum,
-            illo.
-          </p>
-        </div>
-        <div class="text-lines hidden">
-          <h2>Donuts</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum,
-            illo.
-          </p>
-        </div>
-      </section>
-
-      <section class="grid-gallery-container">
-        <div class="row row-cols-1 row-cols-xl-2">
-          <div class="grid-gallery col grid-gallery-1">
-            <div class="grid-item grid-item-1">
-              <img
-                loading="lazy"
-                src="images/yu-jinyang-eDv_2ZADa6k-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="grid-item grid-item-2">
-              <img
-                loading="lazy"
-                src="images/anna-bratiychuk-T7c-y7y6_i0-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="grid-item grid-item-3">
-              <img
-                loading="lazy"
-                src="images/towfiqu-barbhuiya-X8AfWPcVSAc-unsplash 2.jpg"
-                alt=""
-              />
-            </div>
-            <div class="grid-item grid-item-4">
-              <img
-                loading="lazy"
-                src="images/brooke-lark-V4MBq8kue3U-unsplash.jpg"
-                alt=""
-              />
+        <div class="post-intro-section-container">
+          <div class="post-intro-section">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center">
+              <div class="col col-desktop reveal">
+                <h2>Classic</h2>
+              </div>
+              <div class="col post-intro-section-img">
+                <img
+                  class="img-fluid"
+                  src="images/elena-koycheva-PFzy4N0_R3M-unsplash.jpg"
+                />
+              </div>
+              <div class="col col-mobile reveal">
+                <h2>Classic</h2>
+              </div>
             </div>
           </div>
-          <div class="grid-gallery col">
-            <div class="grid-item grid-item-5">
-              <img
-                loading="lazy"
-                src="images/madalyn-cox-aWQjHrCi_c4-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="grid-item grid-item-7">
-              <img
-                loading="lazy"
-                src="images/fidel-fernando-KY5ZBCIE18E-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="grid-item grid-item-8">
-              <img
-                loading="lazy"
-                src="images/lidya-nada--iX-0JI8-0Y-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="grid-item grid-item-6">
-              <img src="images/najlacam-F71ZHHBYs3w-unsplash.jpg" alt="" />
+          <div class="post-intro-section">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center">
+              <div class="col post-intro-section-img">
+                <img
+                  class="img-fluid"
+                  src="images/anastasia-zhenina-V9g1kwNsxwc-unsplash.jpg"
+                />
+              </div>
+              <div class="col reveal">
+                <p>But More Real Strawberries</p>
+              </div>
             </div>
           </div>
         </div>
-        <h1 class="animated animatedFadeInUp" id="grid-gallery-caption">
-          Boundless Delicious.
-        </h1>
+        <div class="grid-section-container">
+          <div class="post-intro-section-container grid-section">
+            <h1 class="animated animatedFadeInUp" id="grid-gallery-caption">
+              Brings More Happiness.
+            </h1>
+            <section class="grid-gallery-container">
+              <div class="row row-cols-1 row-cols-xl-2">
+                <div class="grid-gallery col grid-gallery-1">
+                  <div class="grid-item grid-item-1">
+                    <img
+                      loading="lazy"
+                      src="images/yu-jinyang-eDv_2ZADa6k-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="grid-item grid-item-2">
+                    <img
+                      loading="lazy"
+                      src="images/anna-bratiychuk-T7c-y7y6_i0-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="grid-item grid-item-3">
+                    <img
+                      loading="lazy"
+                      src="images/towfiqu-barbhuiya-X8AfWPcVSAc-unsplash 2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="grid-item grid-item-4">
+                    <img
+                      loading="lazy"
+                      src="images/brooke-lark-V4MBq8kue3U-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="grid-gallery col grid-gallery-2">
+                  <div class="grid-item grid-item-5">
+                    <img
+                      loading="lazy"
+                      src="images/madalyn-cox-aWQjHrCi_c4-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="grid-item grid-item-7">
+                    <img
+                      loading="lazy"
+                      src="images/fidel-fernando-KY5ZBCIE18E-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="grid-item grid-item-8">
+                    <img
+                      loading="lazy"
+                      src="images/lidya-nada--iX-0JI8-0Y-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="grid-item grid-item-6">
+                    <img
+                      src="images/najlacam-F71ZHHBYs3w-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div
+          class="post-intro-section-container new-product-container align-items-center"
+        >
+          <div class="new-product">
+            <div class="new-product-img">
+              <img
+                class="img-fluid"
+                src="images/istockphoto-1269375719-612x612.jpg"
+                alt=""
+              />
+            </div>
+            <div class="new-product-details">
+              <h2>Order Now</h2>
+              <p>$7.99</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="content-wrapper px-3 pb-5">
