@@ -6,6 +6,16 @@ const text = intro.querySelector('h1');
 
 const controller = new ScrollMagic.Controller();
 
+
+window.addEventListener("scroll", function(){
+    let elementHeight = videoMobile.offsetHeight;
+    let scrollTop = this.window.scrollY;
+    offset = Math.min(elementHeight,scrollTop);
+    opacity = 1-offset/300;
+    videoMobile.style.opacity = opacity;
+})
+
+
 //Scenes
 // if (window.getComputedStyle(video).getPropertyValue("display")=="block"){
 //     let scene = new ScrollMagic.Scene({

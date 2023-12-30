@@ -84,6 +84,13 @@ body{
 .intro{
     max-width: 100dvw;
     height: 100%;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    // transform: translateZ(0);
+    z-index: -1;
+    backface-visibility: hidden;
+    overflow: hidden;
     
     .hero-caption{
         @media(max-width: $md){
@@ -97,6 +104,7 @@ body{
         text-wrap: wrap;
         color: transparent;
         -webkit-text-fill-color: transparent;
+        z-index: 1;
         background: rgb(255,255,255);
         background: linear-gradient(60deg, rgba(255,255,255,1) 60%, rgba(232,44,138,1) 81%);
         background: -webkit-linear-gradient(60deg, rgba(255,255,255,1) 60%, rgba(232,44,138,1) 81%);
@@ -144,6 +152,7 @@ body{
     background-color: #e82c8a;
     color: $secondary;
     padding: 200px 0;
+    vertical-align: baseline !important;
     .post-intro-section-container{
         #grid-gallery-caption{
             
