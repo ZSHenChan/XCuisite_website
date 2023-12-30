@@ -104,10 +104,13 @@ body{
     background-color: pink;
     
     .hero-caption{
-        @media(max-width: $md){
-            font-size: 8rem;
+        font-size: 4.5rem;
+        @media(min-width: $sm){
+            font-size: 7rem;
         }
-        font-size: 10rem;
+        @media (min-width:$md) {
+            font-size: 10rem;
+        }
         @media (min-width:$xl) {
             font-size: 12rem;
         }
