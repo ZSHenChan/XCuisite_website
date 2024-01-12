@@ -5,6 +5,7 @@ const introSectionFunc = function () {
   const text = intro.querySelector("h1");
   const introCtaBtn = document.querySelector(".intro-cta-btn");
   const postIntro = document.querySelector(".post-intro");
+  const gridGallery = document.querySelector(".grid-section-container");
   // const controller = new ScrollMagic.Controller();
 
   window.addEventListener("scroll", function () {
@@ -23,22 +24,33 @@ const introSectionFunc = function () {
     videoMobile.style.opacity = opacity;
   });
 
-  const introCtaBtnAnimation = function (entries) {
+  const expandCtaBtn = function (entries) {
     const [entry] = entries;
     if (entry.isIntersecting) {
-      introCtaBtn.classList.remove("expand-btn");
-      introCtaBtn.classList.add("contract-btn");
-    } else {
       introCtaBtn.classList.add("expand-btn");
       introCtaBtn.classList.remove("contract-btn");
     }
   };
 
-  const introCtaObserver = new IntersectionObserver(introCtaBtnAnimation, {
+  const contractCtaBtn = function (entries) {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      introCtaBtn.classList.remove("expand-btn");
+      introCtaBtn.classList.remove("delay-animation");
+      introCtaBtn.classList.add("contract-btn");
+    }
+  };
+
+  const introCtaObserver = new IntersectionObserver(expandCtaBtn, {
     root: null,
-    threshold: 0.1,
+    threshold: 0.3,
+  });
+  const gridGalleryObs = new IntersectionObserver(contractCtaBtn, {
+    root: null,
+    threshold: 0.3,
   });
   introCtaObserver.observe(postIntro);
+  gridGalleryObs.observe(gridGallery);
 
   //Scenes
   // if (window.getComputedStyle(video).getPropertyValue("display")=="block"){

@@ -382,12 +382,16 @@ body {
     bottom: -5rem;
     overflow: hidden;
 
+    z-index: 1;
     cursor: pointer;
 
     &:hover {
       background-color: $text-medium;
       color: $secondary !important;
     }
+  }
+  .delay-animation {
+    animation-delay: 5s !important;
   }
   .expand-btn {
     animation: expand-btn 2.3s;
