@@ -121,18 +121,22 @@
     <main class="rounded-3 text-center p-0" id="main-body">
       <section class="intro">
         <h1 class="hero-caption">Strawberry Flamingo</h1>
-        <!-- <video
+
+        <video
           id="video-desktop"
-          src="videos/video.mov"
-          type="mov"
+          src="videos/intro-video-desktop.mp4"
+          class="d-none d-md-block"
+          type="video/mp4"
           preload="auto"
           muted
           playsinline
-        ></video> -->
+          autoplay
+        ></video>
         <video
           id="video-mobile"
-          src="videos/video.mov"
-          type="mov"
+          class="d-md-none"
+          src="videos/intro-video-mobile.mp4"
+          type="video/mp4"
           preload="auto"
           muted
           playsinline
@@ -140,11 +144,37 @@
         ></video>
       </section>
 
+      <!-- <section class="new-product">
+        <div class="new-product-container">
+          <div class="new-product-wrapper">
+            <div class="new-product-content">
+              <div class="new-product-card row g-0">
+                <img
+                  class="img-fluid col"
+                  src="images/istockphoto-1269375719-612x612.jpg"
+                  alt=""
+                />
+                <div class="new-product-card-content col">
+                  <div class="new-product-card-content-wrapper">
+                    <h2>Strawberry Flamingo</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+                <button>Get Now</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
       <section class="post-intro">
+        <a href="html/offers.html" class="intro-cta-btn-container"
+          ><button class="intro-cta-btn expand-btn">Get Now</button></a
+        >
         <div class="post-intro-section-container">
           <div class="post-intro-section">
             <div class="row row-cols-1 row-cols-md-2 align-items-center">
-              <div class="col col-desktop reveal">
+              <div class="col d-none d-md-block reveal">
                 <h2>Classic</h2>
                 <p>Our beloved ones</p>
               </div>
@@ -154,7 +184,7 @@
                   src="images/elena-koycheva-PFzy4N0_R3M-unsplash.jpg"
                 />
               </div>
-              <div class="col col-mobile reveal">
+              <div class="col d-md-none reveal">
                 <h2>Classic</h2>
                 <p>Our beloved ones</p>
               </div>
@@ -169,14 +199,14 @@
                 />
               </div>
               <div class="col reveal">
-                <h3>More Real Strawberries</h3>
+                <h2>More Real Strawberries</h2>
                 <p>More Tasty</p>
               </div>
             </div>
           </div>
           <div class="post-intro-section">
             <div class="row row-cols-1 row-cols-md-2 align-items-center">
-              <div class="col col-desktop reveal">
+              <div class="col d-none d-md-block reveal">
                 <h2>More Flavours</h2>
                 <p>More Experiences</p>
               </div>
@@ -186,7 +216,7 @@
                   src="images/lore-schodts-8BNGxSAQd6M-unsplash.jpg"
                 />
               </div>
-              <div class="col col-mobile reveal">
+              <div class="col d-md-none reveal">
                 <h2>More Flavours</h2>
                 <p>More Experiences</p>
               </div>
@@ -197,10 +227,8 @@
 
       <section class="grid-section-container">
         <div class="grid-section-wrapper">
-          <h1 class="animated animatedFadeInUp" id="grid-gallery-caption">
-            Brings More Happiness.
-          </h1>
-          <p>random</p>
+          <h2 class="reveal header-2">New Flavour. New Happiness</h2>
+          <p class="reveal">random</p>
           <section class="grid-gallery-container">
             <div class="row row-cols-1 row-cols-xl-2">
               <div class="grid-gallery col grid-gallery-1">
@@ -264,430 +292,204 @@
         </div>
       </section>
 
-      <section class="new-product">
-        <div class="new-product-container">
-          <div class="new-product-wrapper">
-            <div class="new-product-content row row-cols-2">
-              <div class="col">
+      <section class="transparent"></section>
+
+      <section class="carousel">
+        <h2 class="header-2 carousel-header reveal">Meet Our Old Friends</h2>
+        <div class="carousel-wrapper">
+          <div class="card-wrapper">
+            <div class="card-container">
+              <div
+                class="card text-center rounded-5 carousel-card"
+                data-slide="0"
+              >
                 <img
-                  class="img-fluid"
-                  src="images/istockphoto-1269375719-612x612.jpg"
+                  src="../images/lore-schodts-A7PwjrNLf1U-unsplash 2.jpg"
                   alt=""
+                  class="card-image-top rounded-top-5"
                 />
-              </div>
-              <div class="col">
-                <div class="row">
-                  <h2>Title</h2>
-                  <p>helli</p>
+                <div class="card-body justify-content-center">
+                  <h4 class="card-title">Lore&nbsp;Schodts</h4>
+                  <h6 class="card-text">Assorted&nbsp;Caramel</h6>
+                  <div class="cta-links mt-4">
+                    <a class="icon-link" onclick="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-symmetry-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
+                        />
+                      </svg>
+                      Learn More
+                    </a>
+                  </div>
                 </div>
-                <div class="row"><button>Buy</button></div>
+              </div>
+              <div
+                class="card text-center rounded-5 carousel-card carousel-card-active"
+                data-slide="1"
+              >
+                <img
+                  src="/images/kobby-mendez-WXJ33HOrzvE-unsplash 2.jpg"
+                  alt=""
+                  class="card-image-top rounded-top-5"
+                />
+                <div class="card-body justify-content-center">
+                  <h4 class="card-title">Lore&nbsp;Schodts</h4>
+                  <h6 class="card-text">Assorted&nbsp;Caramel</h6>
+                  <div class="cta-links mt-4">
+                    <a class="icon-link" onclick="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-symmetry-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
+                        />
+                      </svg>
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card text-center rounded-5 carousel-card"
+                data-slide="2"
+              >
+                <img
+                  src="images/tijana-drndarski-YC06tYOZqGo-unsplash 2.jpg"
+                  alt=""
+                  class="card-image-top rounded-top-5"
+                />
+                <div class="card-body justify-content-center">
+                  <h4 class="card-title">Lore&nbsp;Schodts</h4>
+                  <h6 class="card-text">Assorted&nbsp;Caramel</h6>
+                  <div class="cta-links mt-4">
+                    <a class="icon-link" onclick="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-symmetry-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
+                        />
+                      </svg>
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card text-center rounded-5 carousel-card"
+                data-slide="3"
+              >
+                <img
+                  src="/images/towfiqu-barbhuiya-X8AfWPcVSAc-unsplash 3.jpg"
+                  alt=""
+                  class="card-image-top rounded-top-5"
+                />
+                <div class="card-body justify-content-center">
+                  <h4 class="card-title">Lore&nbsp;Schodts</h4>
+                  <h6 class="card-text">Assorted&nbsp;Caramel</h6>
+                  <div class="cta-links mt-4">
+                    <a class="icon-link" onclick="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-symmetry-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
+                        />
+                      </svg>
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card text-center rounded-5 carousel-card"
+                data-slide="4"
+              >
+                <img
+                  src="/images/amr-taha-emQK9lB1sns-unsplash 2.jpg"
+                  alt=""
+                  class="card-image-top rounded-top-5"
+                />
+                <div class="card-body justify-content-center">
+                  <h4 class="card-title">Lore&nbsp;Schodts</h4>
+                  <h6 class="card-text">Assorted&nbsp;Caramel</h6>
+                  <div class="cta-links mt-4">
+                    <a class="icon-link" onclick="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-symmetry-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
+                        />
+                      </svg>
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card text-center rounded-5 carousel-card"
+                data-slide="5"
+              >
+                <img
+                  src="/images/shayna-douglas-CQvFD9HrDyY-unsplash 2.jpg"
+                  alt=""
+                  class="card-image-top rounded-top-5"
+                />
+                <div class="card-body justify-content-center">
+                  <h4 class="card-title">Lore&nbsp;Schodts</h4>
+                  <h6 class="card-text">Assorted&nbsp;Caramel</h6>
+                  <div class="cta-links mt-4">
+                    <a class="icon-link" onclick="">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-symmetry-horizontal"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
+                        />
+                      </svg>
+                      Learn More
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="dots"></div>
         </div>
       </section>
-
-      <!-- <section class="content-wrapper px-3 p-5">
-        <h1 class="mb-5">New</h1>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-          <div class="col">
-            <div class="col-section">
-              <div class="card-wrapper">
-                <div class="card text-center rounded-5 reveal face front">
-                  <img
-                    src="images/kobby-mendez-WXJ33HOrzvE-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Kobby&nbsp;Mendez</h4>
-                    <h6 class="card-text">Chocolate</h6>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link" onclick="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Ingredients
-                      </a>
-                      <button class="btn btn-primary text-secondary">
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card text-center rounded-5 face back">
-                  <img
-                    src="images/kobby-mendez-WXJ33HOrzvE-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                    style="transform: scaleX(-1)"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Ingredients</h4>
-                    <p>cookie, sugar</p>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Back
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="col-section">
-              <div class="card-wrapper">
-                <div class="card text-center rounded-5 reveal face front">
-                  <img
-                    src="images/lore-schodts-A7PwjrNLf1U-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Lore&nbsp;Schodts</h4>
-                    <h6 class="card-text">Assorted&nbsp;Caramel</h6>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link" onclick="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Ingredients
-                      </a>
-                      <button class="btn btn-primary text-secondary">
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card text-center rounded-5 face back">
-                  <img
-                    src="images/lore-schodts-A7PwjrNLf1U-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                    style="transform: scaleX(-1)"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Ingredients</h4>
-                    <p>flour, sugar</p>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Back
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="col-section">
-              <div class="card-wrapper">
-                <div class="card text-center rounded-5 reveal face front">
-                  <img
-                    src="images/shayna-douglas-CQvFD9HrDyY-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Shayna&nbsp;Douglas</h4>
-                    <h6 class="card-text">Matcha&nbsp;Icing</h6>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link" onclick="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Ingredients
-                      </a>
-                      <button class="btn btn-primary text-secondary">
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card text-center rounded-5 face back">
-                  <img
-                    src="images/shayna-douglas-CQvFD9HrDyY-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                    style="transform: scaleX(-1)"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Ingredients</h4>
-                    <p>flour, sugar, matcha</p>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Back
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="col-section">
-              <div class="card-wrapper">
-                <div class="card text-center rounded-5 reveal face front">
-                  <img
-                    src="images/tijana-drndarski-YC06tYOZqGo-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Tijana&nbsp;Drndarski</h4>
-                    <h6 class="card-text">Dark&nbsp;Chocolate</h6>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link" onclick="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Ingredients
-                      </a>
-                      <button class="btn btn-primary text-secondary">
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card text-center rounded-5 face back">
-                  <img
-                    src="images/tijana-drndarski-YC06tYOZqGo-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                    style="transform: scaleX(-1)"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Ingredients</h4>
-                    <p>Hazelnut, sugar</p>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Back
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="col-section">
-              <div class="card-wrapper">
-                <div class="card text-center rounded-5 reveal face front">
-                  <img
-                    src="images/towfiqu-barbhuiya-X8AfWPcVSAc-unsplash 3.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Towfiqu&nbsp;Barbhuiya</h4>
-                    <h6 class="card-text">Kids&nbsp;Favourite</h6>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link" onclick="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Ingredients
-                      </a>
-                      <button class="btn btn-primary text-secondary">
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card text-center rounded-5 face back">
-                  <img
-                    src="images/towfiqu-barbhuiya-X8AfWPcVSAc-unsplash 3.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                    style="transform: scaleX(-1)"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Ingredients</h4>
-                    <p>flour, sugar</p>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Back
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="col-section">
-              <div class="card-wrapper">
-                <div class="card text-center rounded-5 reveal face front">
-                  <img
-                    src="images/amr-taha-emQK9lB1sns-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Amr&nbsp;Taha</h4>
-                    <h6 class="card-text">Classic.</h6>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link" onclick="">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Ingredients
-                      </a>
-                      <button class="btn btn-primary text-secondary">
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card text-center rounded-5 face back">
-                  <img
-                    src="images/amr-taha-emQK9lB1sns-unsplash 2.jpg"
-                    alt=""
-                    class="card-image-top rounded-top-5"
-                    style="transform: scaleX(-1)"
-                  />
-                  <div class="card-body justify-content-center">
-                    <h4 class="card-title">Ingredients</h4>
-                    <p>flour, sugar, dark chocolate, hazelnut</p>
-                    <div class="cta-links mt-4">
-                      <a class="icon-link">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-symmetry-horizontal"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                          />
-                        </svg>
-                        Back
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
     </main>
   </body>
 
@@ -924,10 +726,19 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"
   ></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
   <!-- custom js files import -->
   <script src="js/cart.js"></script>
   <script src="js/video.js"></script>
   <script src="js/cardAnimation.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/gridAnimation.js"></script>
+  <script src="js/app.js"></script>
 </html>
