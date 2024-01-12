@@ -1,3 +1,10 @@
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
 //navbar
 #cart-icon {
   @media (max-width: $md) {
@@ -56,10 +63,11 @@
   z-index: 4;
   left: 0;
   top: 0px;
-  background-color: $primary;
+  background: rgba(254, 102, 1, 0.9);
   overflow-y: hidden;
   transition: 0.4s ease-in-out;
-  opacity: 90%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   .global-curtain-content {
     color: $secondary !important;

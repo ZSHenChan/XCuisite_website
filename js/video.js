@@ -2,7 +2,6 @@ const introSectionFunc = function () {
   const intro = document.querySelector(".intro");
   const video = document.getElementById("video-desktop");
   const videoMobile = document.getElementById("video-mobile");
-  const text = intro.querySelector("h1");
   const introCtaBtn = document.querySelector(".intro-cta-btn");
   const postIntro = document.querySelector(".post-intro");
   const gridGallery = document.querySelector(".grid-section-container");

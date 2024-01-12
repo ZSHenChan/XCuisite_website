@@ -35,6 +35,13 @@ body {
     font-weight: bold;
     margin-bottom: 100px;
   }
+  @media (max-width: $md) {
+    font-size: 3rem;
+
+    ~ p {
+      font-size: 2rem;
+    }
+  }
 }
 
 // scroll effect
@@ -122,15 +129,21 @@ body {
   top: 0px;
   width: 100%;
   flex-direction: row-reverse;
-  opacity: 90%;
+  background-color: rgba(254, 102, 1, 0.9);
   @media (max-width: $md) {
     justify-content: end;
   }
 
+  .navbar-collapse {
+    background-color: rgba(254, 102, 1, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
   .navbar-menuback {
     position: fixed;
-    left: 23px;
-    top: 12px;
+    left: 13px;
+    top: 5px;
     @media (min-width: $md) {
       display: none;
     }
@@ -138,13 +151,14 @@ body {
 
   .navbar-nav-scroll {
     @media (width<$md) {
+      font-size: 6rem;
       position: fixed;
       width: 100%;
       top: 0;
       left: 0;
       transition: 0.6s ease-in-out !important;
       overflow-y: hidden !important;
-      background-color: $primary;
+
       text-indent: 2rem;
       ul {
         height: 100dvh;
@@ -173,6 +187,9 @@ body {
         font-weight: bold;
         font-size: 1.2rem;
         letter-spacing: 0.07rem;
+        @media (width<$md) {
+          font-size: 2.4rem;
+        }
       }
     }
   }
@@ -293,13 +310,13 @@ body {
     transform: none;
   }
 
-  20% {
-    transform: translateY(-8rem);
+  30% {
+    transform: translateY(-7rem);
   }
-  40% {
+  50% {
     width: 2rem;
     height: 2rem;
-    transform: translateY(-8rem);
+    transform: translateY(-7rem);
     padding: 0;
   }
   60% {
@@ -386,7 +403,7 @@ body {
     cursor: pointer;
 
     &:hover {
-      background-color: $text-medium;
+      background-color: $text-dark;
       color: $secondary !important;
     }
   }
@@ -550,6 +567,9 @@ body {
   color: #d6336c;
   min-height: 50rem;
   padding: 10rem 3rem;
+  @media (max-width: $md) {
+    padding: 10rem 0rem;
+  }
   .carousel-header {
     margin-bottom: 5rem;
   }
@@ -688,18 +708,9 @@ body {
               text-decoration: underline;
             }
           }
-          a {
-            &::before {
-              content: "";
-              position: absolute;
-              top: 0px;
-              right: 0px;
-              bottom: 0px;
-              left: 0px;
-            }
-          }
           button {
             font-size: 90%;
+            // z-index: ;
           }
         }
         &:hover {
@@ -721,5 +732,5 @@ body {
 //customized scss
 @import "./split-out-animation.scss";
 @import "./footer.scss";
-@import "./nav.scss";
+// @import "./nav.scss";
 @import "./products.scss";
