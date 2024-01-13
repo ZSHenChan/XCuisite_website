@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/css/main.min.css" rel="stylesheet" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
       href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -23,7 +17,12 @@
     <nav class="navbar navbar-dark sticky-top navbar-expand-md px-4 bg-primary">
       <!-- <div class="container-xxl"> -->
       <a href="#" class="navbar-menuback">
-        <img src="images/xcuisite-logo-64.png" alt="xcuisite-logo" width="45" />
+        <img
+          src="images/xcuisite-logo-192.png"
+          alt="xcuisite-logo"
+          width="45"
+          height="45"
+        />
       </a>
 
       <div
@@ -52,9 +51,10 @@
           <li class="navbar-item">
             <a href="#" class="navbar-brand">
               <img
-                src="images/xcuisite-logo-64.png"
+                src="images/xcuisite-logo-192.png"
                 alt="xcuisite-logo"
                 width="45"
+                height="45"
               />
             </a>
           </li>
@@ -93,20 +93,13 @@
     <div class="global-curtain" id="cart-curtain">
       <div class="global-curtain-content">
         <h3>Your Items</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-          voluptatum sit, dolor officiis nihil magnam esse veritatis corporis
-          quaerat dolorum nesciunt iste assumenda quod. Harum nemo libero
-          reprehenderit qui excepturi!
-        </p>
-        <!-- <i class="bi bi-x-lg"></i> -->
       </div>
     </div>
     <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
 
     <main class="rounded-3 text-center p-0" id="main-body">
       <section class="intro">
-        <h1 class="hero-caption">Strawberry Flamingo</h1>
+        <h1 class="hero-caption" role="banner">Strawberry Flamingo</h1>
 
         <video
           id="video-desktop"
@@ -121,7 +114,7 @@
         <video
           id="video-mobile"
           class="d-md-none"
-          src="videos/intro-video-mobile.mp4"
+          src="videos/intro-video-mobile-crop.mp4"
           type="video/mp4"
           preload="auto"
           muted
@@ -162,7 +155,7 @@
         <div class="post-intro-section-container">
           <div class="post-intro-section">
             <div class="row row-cols-1 row-cols-md-2 align-items-center">
-              <div class="col d-none d-md-block reveal">
+              <div class="col d-none d-md-block reveal post-intro-sub-header">
                 <h2>Classic</h2>
                 <p>Our beloved ones</p>
               </div>
@@ -175,7 +168,7 @@
                     alt="our classic doughnut"
                 /></picture>
               </div>
-              <div class="col d-md-none reveal">
+              <div class="col d-md-none reveal post-intro-sub-header">
                 <h2>Classic</h2>
                 <p>Our beloved ones</p>
               </div>
@@ -192,7 +185,7 @@
                     alt="fresh strawberries"
                 /></picture>
               </div>
-              <div class="col reveal">
+              <div class="col reveal post-intro-sub-header">
                 <h2>More Fresh Strawberries</h2>
                 <p>More Tasty</p>
               </div>
@@ -200,7 +193,7 @@
           </div>
           <div class="post-intro-section">
             <div class="row row-cols-1 row-cols-md-2 align-items-center">
-              <div class="col d-none d-md-block reveal">
+              <div class="col d-none d-md-block reveal post-intro-sub-header">
                 <h2>More Flavours</h2>
                 <p>More Experiences</p>
               </div>
@@ -213,7 +206,7 @@
                     alt="image of rows of doughnuts"
                 /></picture>
               </div>
-              <div class="col d-md-none reveal">
+              <div class="col d-md-none reveal post-intro-sub-header">
                 <h2>More Flavours</h2>
                 <p>More Experiences</p>
               </div>
@@ -224,8 +217,10 @@
 
       <section class="grid-section-container">
         <div class="grid-section-wrapper">
-          <h2 class="reveal header-2">New Flavour. New Happiness</h2>
-          <p class="reveal">random</p>
+          <h2 class="reveal header-2 grid-section-header">
+            New Flavour. New Happiness
+          </h2>
+          <p class="reveal grid-section-header">random</p>
           <section class="grid-gallery-container">
             <div class="row row-cols-1 row-cols-xl-2">
               <div class="grid-gallery col grid-gallery-1">
@@ -917,8 +912,8 @@
   <!-- custom js files import -->
   <script src="js/cart.js"></script>
   <script src="js/video.js"></script>
-  <script src="js/cardAnimation.js"></script>
-  <script src="js/footer.js"></script>
   <script src="js/gridAnimation.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/footer.js"></script>
   <script src="js/app.js"></script>
 </html>
