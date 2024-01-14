@@ -29,8 +29,8 @@
         class="navbar-nav justify-content-between d-flex flex-row align-items-center"
       >
         <span id="cart-icon"
-          ><i class="bi bi-gift nav-link"></i><span id="cart-qty">0</span></span
-        >
+          ><i class="bi bi-gift nav-link"></i><span id="cart-qty"></span
+        ></span>
         <button
           class="navbar-toggler"
           type="button"
@@ -94,7 +94,17 @@
     </nav>
     <div class="global-curtain" id="cart-curtain">
       <div class="global-curtain-content">
-        <h3>Your Items</h3>
+        <span class="d-flex justify-content-between align-items-center"
+          ><h3 class="cart-header">Your Items</h3>
+          <button
+            class="btn btn-secondary text-primary fw-bolder empty-cart-btn"
+          >
+            Empty Cart
+          </button></span
+        >
+        <div class="in-cart-wrapper">
+          <span class="h4 mt-3 ms-4">Your cart is empty</span>
+        </div>
       </div>
     </div>
     <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
@@ -320,349 +330,7 @@
         <h2 class="header-2 carousel-header reveal">Meet Our Old Friends</h2>
         <div class="carousel-wrapper">
           <div class="card-wrapper">
-            <div class="card-container">
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="0"
-              >
-                <img
-                  src="images/products/towfiqu.jpg"
-                  alt="donut with colourful sprinkles"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Towfuqi</h4>
-                  <h6 class="card-text">Colourful&nbsp;Carade</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card carousel-card-active"
-                data-slide="1"
-              >
-                <img
-                  src="/images/products/matcha.jpg"
-                  alt="doughnut with matcha icing"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Matcha&nbsp;Deluxe</h4>
-                  <h6 class="card-text">With&nbsp;Sprinkles</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="2"
-              >
-                <img
-                  src="images/products/kobby-mendez.jpg"
-                  alt="tower of donuts with chocolate"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Kobby&nbsp;Mendez</h4>
-                  <h6 class="card-text">For&nbsp;Him</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="3"
-              >
-                <img
-                  src="/images/products/caramel.jpg"
-                  alt="doughnut with caramel sauce"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Caramel</h4>
-                  <h6 class="card-text">Assorted&nbsp;Caramel</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="4"
-              >
-                <img
-                  src="/images/products/classic-choc.jpg"
-                  alt=""
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Classic&nbsp;Schodts</h4>
-                  <h6 class="card-text">Classic&nbsp;.Not Basic</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="5"
-              >
-                <img
-                  src="/images/products/dark-chocolate.jpg"
-                  alt="tower of donuts with chocolate and sprinkles"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Dark&nbsp;Forest</h4>
-                  <h6 class="card-text">Dark&nbsp;Chocolate</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="6"
-              >
-                <img
-                  src="images/products/oreo.jpg"
-                  alt="donut with oreo crumbs"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Oreo&nbsp;Bonanza</h4>
-                  <h6 class="card-text">Kids&nbsp;Favourite</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="7"
-              >
-                <img
-                  src="images/products/banana.jpg"
-                  alt="doughnut with banana cream"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Banana</h4>
-                  <h6 class="card-text">Natural&nbsp;Sweetness</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="8"
-              >
-                <img
-                  src="images/products/halloween-choc.jpg"
-                  alt="halloween doughnut with chocolate"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Scary Chocolate</h4>
-                  <h6 class="card-text">Halloween&nbsp;Special</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="9"
-              >
-                <img
-                  src="images/products/raspberry.jpg"
-                  alt="raspberry flavoured doughnut"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Raspberry</h4>
-                  <h6 class="card-text">Stay&nbsp;Pretty</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="card text-center rounded-5 carousel-card"
-                data-slide="10"
-              >
-                <img
-                  src="images/products/hazelnut.jpg"
-                  alt="donut with hazelnuts"
-                  class="card-image-top rounded-top-5"
-                />
-                <div class="card-body justify-content-center">
-                  <h4 class="card-title">Hazelnut</h4>
-                  <h6 class="card-text">Nuts&nbsp;Kraze</h6>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="card-container"></div>
           </div>
           <div class="dots"></div>
         </div>
@@ -879,16 +547,14 @@
         class="globalfooter-mini-shop border-secondary border-bottom mb-3 d-flex justify-content-between py-1"
       >
         <p class="mt-2">
-          Check out our stores:&nbsp;<span
-            ><a href="#" class="">Find a store</a></span
-          >
+          Check out our stores:&nbsp;<span><a href="#">Find a store</a></span>
           or call 012-345-6789
         </p>
         <div class="social-medias fs-4 lh-0">
-          <a href="#" class="p-3" name="facebook-link" role="link"
+          <a href="#" class="p-3" aria-label="facebook-link" role="link"
             ><i class="bi bi-facebook"></i
           ></a>
-          <a href="#" class="p-3" name="instagram-link" role="link"
+          <a href="#" class="p-3" aria-label="instagram-link" role="link"
             ><i class="bi bi-instagram"></i
           ></a>
         </div>
@@ -923,6 +589,7 @@
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
   ></script>
   <!-- custom js files import -->
+  <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/video.js"></script>
   <script src="js/gridAnimation.js"></script>

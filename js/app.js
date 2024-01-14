@@ -15,3 +15,12 @@ reveals.forEach((re) => revealObs.observe(re));
 
 const currentYear = document.getElementById("current-year");
 currentYear.innerHTML = new Date().getFullYear();
+
+const emptyCartBtn = document.querySelector(".empty-cart-btn");
+const clearCart = function () {
+  localStorage.clear();
+  displayCart();
+  curtainFlyoutDisable();
+};
+
+emptyCartBtn.addEventListener("click", clearCart);

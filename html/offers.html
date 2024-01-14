@@ -29,6 +29,7 @@
           src="../images/xcuisite-logo-64.png"
           alt="xcuisite logo"
           width="45"
+          height="45"
         />
       </a>
 
@@ -59,8 +60,13 @@
       >
         <ul class="navbar-nav">
           <li class="navbar-item">
-            <a href="../index.html" class="navbar-brand">
-              <img src="../images/xcuisite-logo-64.png" alt="" width="45" />
+            <a href="../index.html" class="navbar-brand" aria-label="main page">
+              <img
+                src="../images/xcuisite-logo-64.png"
+                alt=""
+                width="45"
+                height="45"
+              />
             </a>
           </li>
           <li class="navbar-item">
@@ -97,7 +103,15 @@
     </nav>
     <div class="global-curtain" id="cart-curtain">
       <div class="global-curtain-content">
-        <h3 class="cart-header">Your Items</h3>
+        <span class="d-flex justify-content-between align-items-center"
+          ><h3 class="cart-header">Your Items</h3>
+          <button
+            class="btn btn-secondary text-primary fw-bolder empty-cart-btn"
+          >
+            Empty Cart
+          </button></span
+        >
+        <span></span>
         <div class="in-cart-wrapper"></div>
       </div>
     </div>
@@ -360,10 +374,10 @@
           or call 012-345-6789
         </p>
         <div class="social-medias fs-4 lh-0">
-          <a href="#" class="p-3" name="facebook-link" role="link"
+          <a href="#" class="p-3" aria-label="facebook-link" role="link"
             ><i class="bi bi-facebook"></i
           ></a>
-          <a href="#" class="p-3" name="instagram-link" role="link"
+          <a href="#" class="p-3" aria-label="instagram-link" role="link"
             ><i class="bi bi-instagram"></i
           ></a>
         </div>
@@ -390,6 +404,7 @@
     crossorigin="anonymous"
   ></script>
   <!-- custom js files import -->
+  <script src="../js/products.js"></script>
   <script src="../js/offers.js"></script>
   <script src="../js/cart.js"></script>
   <script src="../js/footer.js"></script>
