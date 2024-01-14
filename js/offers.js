@@ -7,7 +7,7 @@ const product0 = {
   description: "Strawberry Beast",
   img: "/images/products/strawberry-indulgence.jpg",
   thumbnail: "/images/products/strawberry-indulgence_tn.jpg",
-  imgAlt: "",
+  imgAlt: "Strawberry Indulgence",
   ingredients: "strawberry",
 };
 const product1 = {
@@ -15,6 +15,7 @@ const product1 = {
   description: "Nuts&nbsp;Kraze",
   img: "/images/products/hazelnut.jpg",
   thumbnail: "/images/products/hazelnut_tn.jpg",
+  imgAlt: "Hazelnut Doughnut",
   ingredients: "sugar",
 };
 const product2 = {
@@ -22,6 +23,7 @@ const product2 = {
   description: "For&nbsp;Him",
   img: "/images/products/kobby-mendez.jpg",
   thumbnail: "/images/products/kobby-mendez_tn.jpg",
+  imgAlt: "Kobby Mendez Doughnut",
   ingredients: "cookie",
 };
 const product3 = {
@@ -29,6 +31,7 @@ const product3 = {
   description: "Assorted&nbsp;Caramel",
   img: "/images/products/caramel.jpg",
   thumbnail: "/images/products/caramel_tn.jpg",
+  imgAlt: "Caramel icing doughnut",
   ingredients: "caramel",
 };
 const product4 = {
@@ -36,6 +39,7 @@ const product4 = {
   description: "Matcha&nbsp;Icing",
   img: "/images/products/matcha.jpg",
   thumbnail: "/images/products/matcha_tn.jpg",
+  imgAlt: "Match icing doughnut",
   ingredients: "matcha",
 };
 const product5 = {
@@ -43,6 +47,7 @@ const product5 = {
   description: "Dark&nbsp;Chocolate",
   img: "/images/products/dark-chocolate.jpg",
   thumbnail: "/images/products/dark-chocolate_tn.jpg",
+  imgAlt: "Dark Forest doughnut",
   ingredients: "98% chocolate",
 };
 const product6 = {
@@ -50,6 +55,7 @@ const product6 = {
   description: "Colourful&nbsp;Carade",
   img: "/images/products/towfiqu.jpg",
   thumbnail: "/images/products/towfiqu_tn.jpg",
+  imgAlt: "doughnut with colourful sprinkles",
   ingredients: "sugar",
 };
 const product7 = {
@@ -57,6 +63,7 @@ const product7 = {
   description: "Classic&nbsp;.Not Basic",
   img: "/images/products/classic-choc.jpg",
   thumbnail: "/images/products/classic-choc_tn.jpg",
+  imgAlt: "classic chocolate doughnut",
   ingredients: "sugar",
 };
 const product8 = {
@@ -64,6 +71,7 @@ const product8 = {
   description: "Avada Kedavra",
   img: "/images/products/black-magic.jpg",
   thumbnail: "/images/products/black-magic_tn.jpg",
+  imgAlt: "dark chocolate doughnut with self-made cream",
   ingredients: "sugar",
 };
 const product9 = {
@@ -71,13 +79,15 @@ const product9 = {
   description: "Kids&nbsp;Favourite",
   img: "/images/products/oreo.jpg",
   thumbnail: "/images/products/oreo_tn.jpg",
+  imgAlt: "oreo doughnut",
   ingredients: "sugar",
 };
 const product10 = {
-  productName: "Banana",
+  productName: "Banana Indulgence",
   description: "Natural&nbsp;Sweetness",
   img: "/images/products/banana.jpg",
   thumbnail: "/images/products/banana_tn.jpg",
+  imgAlt: "banana doughnut",
   ingredients: "sugar",
 };
 const product11 = {
@@ -85,6 +95,7 @@ const product11 = {
   description: "Halloween&nbsp;Special",
   img: "/images/products/halloween-choc.jpg",
   thumbnail: "/images/products/halloween-choc_tn.jpg",
+  imgAlt: "halloween special doughnut",
   ingredients: "sugar",
 };
 const product12 = {
@@ -92,6 +103,7 @@ const product12 = {
   description: "Stay&nbsp;Pretty",
   img: "/images/products/raspberry.jpg",
   thumbnail: "/images/products/raspberry_tn.jpg",
+  imgAlt: "raspberry doughnut",
   ingredients: "sugar",
 };
 
@@ -119,7 +131,7 @@ products.forEach((product, i) => {
         <div class="card text-center rounded-5  face front">
           <img
             src="${product.img}"
-            alt=""
+            alt="${product.imgAlt}"
             class="card-image-top rounded-top-5"
           />
           <div class="card-body justify-content-center">
@@ -150,7 +162,7 @@ products.forEach((product, i) => {
         <div class="card text-center rounded-5 face back">
           <img
             src="${product.img}"
-            alt=""
+            alt="${product.imgAlt}"
             class="card-image-top rounded-top-5"
             style="transform: scaleX(-1)"
           />
@@ -185,6 +197,14 @@ const cardBtns = document.querySelectorAll(".card-wrapper .btn");
 const cardWrapper = document.querySelectorAll(".card-wrapper");
 const inCartWrapper = document.querySelector(".in-cart-wrapper");
 const modal = document.querySelector(".modal");
+const modalBtn = modal.querySelector(".modal-btn");
+const modalItemName = modal.querySelector(".modal-item-name");
+const modalImg = modal.querySelector(".card-img-top");
+let modalProduct;
+let targetData;
+modalBtn.addEventListener("click", function () {
+  getQtyFromModal();
+});
 
 const displayCart = function () {
   inCartWrapper.innerHTML = "";
@@ -197,7 +217,7 @@ const displayCart = function () {
           <span class="item-img col-4">
             <img
               src="${product.thumbnail}"
-              alt=""
+              alt="${product.imgAlt}"
               class="rounded top-5"
               width="64"
               height="64"
@@ -211,7 +231,7 @@ const displayCart = function () {
   });
 };
 
-const addToCart = function (targetData, qty) {
+const addToCart = function (qty) {
   const prd = window.localStorage.getItem(targetData);
   if (qty <= 0) return;
   if (prd == null) {
@@ -223,26 +243,18 @@ const addToCart = function (targetData, qty) {
   displayCart();
 };
 
-// const getQtyFromModal = function(){
-
-// }
-
-function modalWindow(targetData) {
-  const product = products[targetData];
-  modal.classList.remove("hidden");
-  const modalItemName = modal.querySelector(".modal-item-name");
+const getQtyFromModal = function () {
   const qty = modal.querySelector(".modal-item-qty");
-  const modalImg = modal.querySelector(".card-img-top");
-  const modalBtn = modal.querySelector(".modal-btn");
-  modalImg.setAttribute("src", product.img);
-  modalItemName.innerHTML = product.productName;
-  modalBtn.addEventListener("click", function () {
-    modal.classList.add("hidden");
-    const quantity = qty.value;
-    console.log(`${quantity} items added`);
-    addToCart(targetData, +quantity);
-    modalBtn.removeEventListener("click", this);
-  });
+  modal.classList.add("hidden");
+  const quantity = qty.value;
+  console.log(`${quantity} items added`);
+  addToCart(+quantity);
+};
+
+function modalWindow() {
+  modal.classList.remove("hidden");
+  modalImg.setAttribute("src", modalProduct.img);
+  modalItemName.innerHTML = modalProduct.productName;
 }
 
 cardWrapper.forEach((card) => {
@@ -255,8 +267,9 @@ cardWrapper.forEach((card) => {
     ) {
       target.closest(".card-wrapper").classList.toggle("is-flipped");
     } else if (target.classList.contains("btn")) {
-      const targetData = target.closest(".card-wrapper").dataset.product;
-      modalWindow(targetData);
+      targetData = target.closest(".card-wrapper").dataset.product;
+      modalProduct = products[targetData];
+      modalWindow();
     }
   });
 });

@@ -12,3 +12,6 @@ const revealObs = new IntersectionObserver(revealFunc, {
   threshold: 0.1,
 });
 reveals.forEach((re) => revealObs.observe(re));
+
+const currentYear = document.getElementById("current-year");
+currentYear.innerHTML = new Date().getFullYear();
