@@ -195,11 +195,7 @@ body {
 }
 
 //navbar
-#cart-icon {
-  @media (max-width: $md) {
-    margin-right: 1rem;
-  }
-}
+
 .navbar {
   position: fixed;
   top: 0px;
@@ -208,6 +204,27 @@ body {
   background-color: rgba(244, 98, 0, 0.9);
   @media (max-width: $md) {
     justify-content: end;
+  }
+
+  #cart-icon {
+    position: relative;
+    @media (min-width<$lg) {
+      margin-left: 2rem;
+    }
+    margin-right: 1rem;
+  }
+  #cart-qty {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    background-color: transparent;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 90%;
+    color: $secondary;
+    font-weight: bold;
   }
 
   .navbar-collapse {
@@ -240,6 +257,10 @@ body {
         height: 100dvh;
         margin-top: 3rem;
         margin-left: 1rem;
+        @media (width<$md) {
+          margin-top: 10rem;
+          margin-left: 0;
+        }
       }
       li > a {
         font-size: 2rem;

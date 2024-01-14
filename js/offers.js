@@ -1,132 +1,132 @@
 "use strict";
+const offers = function () {
+  const cardsContainer = document.querySelector(".content-wrapper .row");
 
-const cardsContainer = document.querySelector(".content-wrapper .row");
+  const product0 = {
+    productName: "Strawberry&nbsp;Indulgence",
+    description: "Strawberry Beast",
+    img: "/images/products/strawberry-indulgence.jpg",
+    thumbnail: "/images/products/strawberry-indulgence_tn.jpg",
+    imgAlt: "Strawberry Indulgence",
+    ingredients: "strawberry",
+  };
+  const product1 = {
+    productName: "Hazelnut",
+    description: "Nuts&nbsp;Kraze",
+    img: "/images/products/hazelnut.jpg",
+    thumbnail: "/images/products/hazelnut_tn.jpg",
+    imgAlt: "Hazelnut Doughnut",
+    ingredients: "sugar",
+  };
+  const product2 = {
+    productName: "Kobby&nbsp;Mendez",
+    description: "For&nbsp;Him",
+    img: "/images/products/kobby-mendez.jpg",
+    thumbnail: "/images/products/kobby-mendez_tn.jpg",
+    imgAlt: "Kobby Mendez Doughnut",
+    ingredients: "cookie",
+  };
+  const product3 = {
+    productName: "Lore&nbsp;Schodts",
+    description: "Assorted&nbsp;Caramel",
+    img: "/images/products/caramel.jpg",
+    thumbnail: "/images/products/caramel_tn.jpg",
+    imgAlt: "Caramel icing doughnut",
+    ingredients: "caramel",
+  };
+  const product4 = {
+    productName: "Matcha&nbsp;Deluxe",
+    description: "Matcha&nbsp;Icing",
+    img: "/images/products/matcha.jpg",
+    thumbnail: "/images/products/matcha_tn.jpg",
+    imgAlt: "Match icing doughnut",
+    ingredients: "matcha",
+  };
+  const product5 = {
+    productName: "Dark&nbsp;Forest",
+    description: "Dark&nbsp;Chocolate",
+    img: "/images/products/dark-chocolate.jpg",
+    thumbnail: "/images/products/dark-chocolate_tn.jpg",
+    imgAlt: "Dark Forest doughnut",
+    ingredients: "98% chocolate",
+  };
+  const product6 = {
+    productName: "Towfuqi",
+    description: "Colourful&nbsp;Carade",
+    img: "/images/products/towfiqu.jpg",
+    thumbnail: "/images/products/towfiqu_tn.jpg",
+    imgAlt: "doughnut with colourful sprinkles",
+    ingredients: "sugar",
+  };
+  const product7 = {
+    productName: "Classic&nbsp;Schodts",
+    description: "Classic&nbsp;.Not Basic",
+    img: "/images/products/classic-choc.jpg",
+    thumbnail: "/images/products/classic-choc_tn.jpg",
+    imgAlt: "classic chocolate doughnut",
+    ingredients: "sugar",
+  };
+  const product8 = {
+    productName: "Black Magic",
+    description: "Avada Kedavra",
+    img: "/images/products/black-magic.jpg",
+    thumbnail: "/images/products/black-magic_tn.jpg",
+    imgAlt: "dark chocolate doughnut with self-made cream",
+    ingredients: "sugar",
+  };
+  const product9 = {
+    productName: "Oreo&nbsp;Bonanza",
+    description: "Kids&nbsp;Favourite",
+    img: "/images/products/oreo.jpg",
+    thumbnail: "/images/products/oreo_tn.jpg",
+    imgAlt: "oreo doughnut",
+    ingredients: "sugar",
+  };
+  const product10 = {
+    productName: "Banana Indulgence",
+    description: "Natural&nbsp;Sweetness",
+    img: "/images/products/banana.jpg",
+    thumbnail: "/images/products/banana_tn.jpg",
+    imgAlt: "banana doughnut",
+    ingredients: "sugar",
+  };
+  const product11 = {
+    productName: "Scary Chocolate",
+    description: "Halloween&nbsp;Special",
+    img: "/images/products/halloween-choc.jpg",
+    thumbnail: "/images/products/halloween-choc_tn.jpg",
+    imgAlt: "halloween special doughnut",
+    ingredients: "sugar",
+  };
+  const product12 = {
+    productName: "Raspberry",
+    description: "Stay&nbsp;Pretty",
+    img: "/images/products/raspberry.jpg",
+    thumbnail: "/images/products/raspberry_tn.jpg",
+    imgAlt: "raspberry doughnut",
+    ingredients: "sugar",
+  };
 
-const product0 = {
-  productName: "Strawberry&nbsp;Indulgence",
-  description: "Strawberry Beast",
-  img: "/images/products/strawberry-indulgence.jpg",
-  thumbnail: "/images/products/strawberry-indulgence_tn.jpg",
-  imgAlt: "Strawberry Indulgence",
-  ingredients: "strawberry",
-};
-const product1 = {
-  productName: "Hazelnut",
-  description: "Nuts&nbsp;Kraze",
-  img: "/images/products/hazelnut.jpg",
-  thumbnail: "/images/products/hazelnut_tn.jpg",
-  imgAlt: "Hazelnut Doughnut",
-  ingredients: "sugar",
-};
-const product2 = {
-  productName: "Kobby&nbsp;Mendez",
-  description: "For&nbsp;Him",
-  img: "/images/products/kobby-mendez.jpg",
-  thumbnail: "/images/products/kobby-mendez_tn.jpg",
-  imgAlt: "Kobby Mendez Doughnut",
-  ingredients: "cookie",
-};
-const product3 = {
-  productName: "Lore&nbsp;Schodts",
-  description: "Assorted&nbsp;Caramel",
-  img: "/images/products/caramel.jpg",
-  thumbnail: "/images/products/caramel_tn.jpg",
-  imgAlt: "Caramel icing doughnut",
-  ingredients: "caramel",
-};
-const product4 = {
-  productName: "Matcha&nbsp;Deluxe",
-  description: "Matcha&nbsp;Icing",
-  img: "/images/products/matcha.jpg",
-  thumbnail: "/images/products/matcha_tn.jpg",
-  imgAlt: "Match icing doughnut",
-  ingredients: "matcha",
-};
-const product5 = {
-  productName: "Dark&nbsp;Forest",
-  description: "Dark&nbsp;Chocolate",
-  img: "/images/products/dark-chocolate.jpg",
-  thumbnail: "/images/products/dark-chocolate_tn.jpg",
-  imgAlt: "Dark Forest doughnut",
-  ingredients: "98% chocolate",
-};
-const product6 = {
-  productName: "Towfuqi",
-  description: "Colourful&nbsp;Carade",
-  img: "/images/products/towfiqu.jpg",
-  thumbnail: "/images/products/towfiqu_tn.jpg",
-  imgAlt: "doughnut with colourful sprinkles",
-  ingredients: "sugar",
-};
-const product7 = {
-  productName: "Classic&nbsp;Schodts",
-  description: "Classic&nbsp;.Not Basic",
-  img: "/images/products/classic-choc.jpg",
-  thumbnail: "/images/products/classic-choc_tn.jpg",
-  imgAlt: "classic chocolate doughnut",
-  ingredients: "sugar",
-};
-const product8 = {
-  productName: "Black Magic",
-  description: "Avada Kedavra",
-  img: "/images/products/black-magic.jpg",
-  thumbnail: "/images/products/black-magic_tn.jpg",
-  imgAlt: "dark chocolate doughnut with self-made cream",
-  ingredients: "sugar",
-};
-const product9 = {
-  productName: "Oreo&nbsp;Bonanza",
-  description: "Kids&nbsp;Favourite",
-  img: "/images/products/oreo.jpg",
-  thumbnail: "/images/products/oreo_tn.jpg",
-  imgAlt: "oreo doughnut",
-  ingredients: "sugar",
-};
-const product10 = {
-  productName: "Banana Indulgence",
-  description: "Natural&nbsp;Sweetness",
-  img: "/images/products/banana.jpg",
-  thumbnail: "/images/products/banana_tn.jpg",
-  imgAlt: "banana doughnut",
-  ingredients: "sugar",
-};
-const product11 = {
-  productName: "Scary Chocolate",
-  description: "Halloween&nbsp;Special",
-  img: "/images/products/halloween-choc.jpg",
-  thumbnail: "/images/products/halloween-choc_tn.jpg",
-  imgAlt: "halloween special doughnut",
-  ingredients: "sugar",
-};
-const product12 = {
-  productName: "Raspberry",
-  description: "Stay&nbsp;Pretty",
-  img: "/images/products/raspberry.jpg",
-  thumbnail: "/images/products/raspberry_tn.jpg",
-  imgAlt: "raspberry doughnut",
-  ingredients: "sugar",
-};
+  const products = [
+    product0,
+    product1,
+    product2,
+    product3,
+    product4,
+    product5,
+    product6,
+    product7,
+    product8,
+    product9,
+    product10,
+    product11,
+    product12,
+  ];
 
-const products = [
-  product0,
-  product1,
-  product2,
-  product3,
-  product4,
-  product5,
-  product6,
-  product7,
-  product8,
-  product9,
-  product10,
-  product11,
-  product12,
-];
-
-products.forEach((product, i) => {
-  cardsContainer.insertAdjacentHTML(
-    "beforeend",
-    `<div class="col-section reveal">
+  products.forEach((product, i) => {
+    cardsContainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="col-section reveal">
       <div class="card-wrapper" data-product="${i}">
         <div class="card text-center rounded-5  face front">
           <img
@@ -190,30 +190,35 @@ products.forEach((product, i) => {
         </div>
       </div>
     </div>`
-  );
-});
+    );
+  });
 
-const cardBtns = document.querySelectorAll(".card-wrapper .btn");
-const cardWrapper = document.querySelectorAll(".card-wrapper");
-const inCartWrapper = document.querySelector(".in-cart-wrapper");
-const modal = document.querySelector(".modal");
-const modalBtn = modal.querySelector(".modal-btn");
-const modalItemName = modal.querySelector(".modal-item-name");
-const modalImg = modal.querySelector(".card-img-top");
-let modalProduct;
-let targetData;
-modalBtn.addEventListener("click", function () {
-  getQtyFromModal();
-});
+  const cardBtns = document.querySelectorAll(".card-wrapper .btn");
+  const cardWrapper = document.querySelectorAll(".card-wrapper");
+  const inCartWrapper = document.querySelector(".in-cart-wrapper");
+  const modal = document.querySelector(".modal");
+  const modalBtn = modal.querySelector(".modal-btn");
+  const modalItemName = modal.querySelector(".modal-item-name");
+  const modalImg = modal.querySelector(".card-img-top");
+  const cartQty = document.getElementById("cart-qty");
+  let modalProduct;
+  let targetData;
+  let itemQtyTracker = 0;
+  modalBtn.addEventListener("click", function () {
+    getQtyFromModal();
+  });
 
-const displayCart = function () {
-  inCartWrapper.innerHTML = "";
-  Object.entries(localStorage).forEach((item) => {
-    const product = products[+item[0]];
-    const qty = +item[1];
-    inCartWrapper.insertAdjacentHTML(
-      "beforeend",
-      `<li class="item row">
+  const displayCart = function () {
+    inCartWrapper.innerHTML = "";
+
+    let itemQty = 0;
+    Object.entries(localStorage).forEach((item) => {
+      const product = products[+item[0]];
+      const qty = +item[1];
+      itemQty += qty;
+      inCartWrapper.insertAdjacentHTML(
+        "beforeend",
+        `<li class="item row">
           <span class="item-img col-4">
             <img
               src="${product.thumbnail}"
@@ -227,49 +232,53 @@ const displayCart = function () {
             >${product.productName}<br><span class="item-qty"> x${qty}</span></span
           >
         </li>`
-    );
-  });
-};
+      );
+    });
+    itemQtyTracker = itemQty;
+    cartQty.innerHTML = itemQtyTracker;
+  };
 
-const addToCart = function (qty) {
-  const prd = window.localStorage.getItem(targetData);
-  if (qty <= 0) return;
-  if (prd == null) {
-    window.localStorage.setItem(targetData, qty);
-  } else {
-    const oldQty = +window.localStorage.getItem(targetData);
-    window.localStorage.setItem(targetData, qty + oldQty);
-  }
-  displayCart();
-};
-
-const getQtyFromModal = function () {
-  const qty = modal.querySelector(".modal-item-qty");
-  modal.classList.add("hidden");
-  const quantity = qty.value;
-  console.log(`${quantity} items added`);
-  addToCart(+quantity);
-};
-
-function modalWindow() {
-  modal.classList.remove("hidden");
-  modalImg.setAttribute("src", modalProduct.img);
-  modalItemName.innerHTML = modalProduct.productName;
-}
-
-cardWrapper.forEach((card) => {
-  card.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = e.target;
-    if (
-      target.classList.contains("card-image-top") ||
-      target.classList.contains("icon-link")
-    ) {
-      target.closest(".card-wrapper").classList.toggle("is-flipped");
-    } else if (target.classList.contains("btn")) {
-      targetData = target.closest(".card-wrapper").dataset.product;
-      modalProduct = products[targetData];
-      modalWindow();
+  const addToCart = function (qty) {
+    const prd = window.localStorage.getItem(targetData);
+    if (qty <= 0) return;
+    if (prd == null) {
+      window.localStorage.setItem(targetData, qty);
+    } else {
+      const oldQty = +window.localStorage.getItem(targetData);
+      window.localStorage.setItem(targetData, qty + oldQty);
     }
+    displayCart();
+  };
+
+  const getQtyFromModal = function () {
+    const qty = modal.querySelector(".modal-item-qty");
+    modal.classList.add("hidden");
+    const quantity = qty.value;
+    addToCart(+quantity);
+  };
+
+  function modalWindow() {
+    modal.classList.remove("hidden");
+    modalImg.setAttribute("src", modalProduct.img);
+    modalItemName.innerHTML = modalProduct.productName;
+  }
+
+  cardWrapper.forEach((card) => {
+    card.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = e.target;
+      if (
+        target.classList.contains("card-image-top") ||
+        target.classList.contains("icon-link")
+      ) {
+        target.closest(".card-wrapper").classList.toggle("is-flipped");
+      } else if (target.classList.contains("btn")) {
+        targetData = target.closest(".card-wrapper").dataset.product;
+        modalProduct = products[targetData];
+        modalWindow();
+      }
+    });
   });
-});
+};
+
+offers();
