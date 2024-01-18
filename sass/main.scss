@@ -847,12 +847,9 @@ body {
 
 //import scss
 @import "../node_modules/bootstrap/scss/bootstrap";
-//google fonts
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
 //bootstrap
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 //customized scss
-@import "./split-out-animation.scss";
 @import "./footer.scss";
 // @import "./nav.scss";
 @import "./products.scss";
